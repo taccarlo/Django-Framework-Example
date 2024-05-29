@@ -1,8 +1,17 @@
 # Django rest api study
 ## Author: Carlo Tacchella
 
-## Request
+## Roadmap
 
+- [x] Build a backend in Django
+- [x] Populate DB with csv file
+- [ ] Write post query api to obtain the requested data
+    - [ ] Query n.1
+    - [ ] Query n.2
+- [ ] Frontend react page to show 3 Pages:
+    - [ ] All tuples
+    - [ ] from-to input page
+    - [ ] result page  
 
 ## Creating the project
 ### Creating the app
@@ -34,10 +43,6 @@ python manage.py runserver
 In order to support the app with a DB
   ```sh
 python manage.py sqlmigrate subscription 0001 
-  ```
-This will create
-  ```sh
-CREATE TABLE "subscription_subscriptiondata" (...);    
   ```
 Create a super user to access to database
   ```sh

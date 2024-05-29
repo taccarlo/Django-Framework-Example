@@ -8,11 +8,11 @@ class Subscriptiondata(models.Model):
         return "Subscription n. " + self.ID_sub
         
     # The ID of the subscription
-    ID_sub = models.CharField(max_length=200)
+    ID_sub = models.CharField(max_length=200, primary_key=True)
     # The start of the subscription
-    starting_date = models.DateTimeField(blank=True,null=True)
+    starting_date = models.DateField(blank=True,null=True)
     # The end of the subscription
-    ending_date = models.DateTimeField(blank=True,null=True)
+    ending_date = models.DateField(blank=True,null=True)
     # The ID of the product
     ID_prod = models.CharField(max_length=200)
     # The description of the product
