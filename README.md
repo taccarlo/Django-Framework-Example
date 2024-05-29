@@ -17,7 +17,7 @@ In order to create the module to manage the subscriptions
 ### Creating migration from module Subscription
 In order to make migrations
   ```sh
-  python3 manage.py makemigrations
+  python manage.py makemigrations
   ```
 ## installed apps
 - rest_framework if is needed run
@@ -29,6 +29,25 @@ In order to make migrations
   ```sh
 python manage.py runserver
   ```
+## Setting up database
+
+In order to support the app with a DB
+  ```sh
+python manage.py sqlmigrate subscription 0001 
+  ```
+This will create
+  ```sh
+CREATE TABLE "subscription_subscriptiondata" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ID_sub" varchar(200) 
+NOT NULL, "ID_prod" varchar(200) NOT NULL, "prod_desc" varchar(500) NOT NULL, "price" real NOT NULL);    
+  ```
+Create a super user to access to database
+  ```sh
+python manage.py createsuperuser
+  ```
+example admin admin@admin.com admin
+
+To operate any change delete the migration folder, run again
+python manage.py makemigrations and python manage.py migrate
 ## Structure
 # Business Logic
 The entity "Subscription"
@@ -51,7 +70,7 @@ I choose to develop the project in Django framework.
 -The Subscription of the project is: 
 Subscription(<u>ID_sub</u>, starting_date, ending_date,ID_prod, prod_desc, price)
 In a normal DBMS in a bigger project I would separate the subscription and the product info like the id, the product description in a separate table.
-
+-settings.py file is set for a project not yet in production environment.
 
 
 ## About the testing
