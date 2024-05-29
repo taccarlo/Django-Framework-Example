@@ -1,5 +1,33 @@
-<!--
+# Django rest api study
+## Author: Carlo Tacchella
 
+## Request
+
+## Creating the project
+
+In order to create rest api server
+  ```sh
+  django-admin startproject myrestapiserver
+  ```
+In order to create the module to manage the subscriptions
+  ```sh
+  django-admin startapp subscription
+  ```
+
+## Run this project
+
+
+## About this Project
+I choose to develop the project in Django framework.
+
+## Assumptions
+-
+
+## About the testing
+
+## Rest API Documentation
+
+<!--
 <a name="readme-top"></a>
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
