@@ -10,6 +10,7 @@ class SubscriptionViewSet(viewsets.ModelViewSet):
 
 # This view return all successfull data order by number of subscribers and revenue 
 class SubscriptionMostSuccessfulViewSet(viewsets.ModelViewSet):
+    
     date_from = "2023-09-18"
     date_to = "2023-09-18"
     queryset = Subscriptiondata.objects.all()
@@ -28,6 +29,5 @@ class SubscriptionMostSuccessfulViewSet(viewsets.ModelViewSet):
 # Consegna: Dato un periodo temporale (data da-a), produrre una tabella con il numero 
 # di abbonamenti attivi per ciascun giorno e i ricavi complessivi di quel giorno
 class SubscriptionMostSoldByDayViewSet(viewsets.ModelViewSet):
-    # TODO deploy this query
     queryset = Subscriptiondata.objects.all()
     serializer_class = SubscriptionSerializer

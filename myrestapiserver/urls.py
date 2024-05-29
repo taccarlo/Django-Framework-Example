@@ -19,6 +19,18 @@ from django.urls import include,path
 from rest_framework import routers
 from subscription.views import SubscriptionViewSet, SubscriptionMostSuccessfulViewSet, SubscriptionMostSoldByDayViewSet 
 
+"""
+There are two mandatory arguments to the register() method:
+
+    prefix - The URL prefix to use for this set of routes.
+    viewset - The viewset class.
+
+    Optionally, you may also specify an additional argument:
+
+    basename - The base to use for the URL names that are created. If unset the basename will be automatically
+    generated based on the queryset attribute of the viewset, if it has one. Note that if the viewset does not 
+    include a queryset attribute then you must set basename when registering the viewse
+"""
 router = routers.SimpleRouter()
 router.register('all', SubscriptionViewSet)
 router.register('mostsuccessful', SubscriptionMostSuccessfulViewSet, basename='mostsuccessful_router') 
