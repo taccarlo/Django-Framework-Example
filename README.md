@@ -13,15 +13,34 @@ In order to create the module to manage the subscriptions
   ```sh
   django-admin startapp subscription
   ```
-
+## installed apps
+- rest_framework
 ## Run this project
 
+## Structure
+# Business Logic
+The entity "Subscription"
+Primary key: 
+- *ID_sub* The ID of the subscription
+Attributes:
+- *starting_date* the start of the subscription
+- *ending_date* the end of the subscription
+- *ID_prod* the ID of the product
+- *prod_desc* the description of the product
+- *price* the price of the product
+
+# Data Access Layer
+# User Interface
 
 ## About this Project
 I choose to develop the project in Django framework.
 
 ## Assumptions
--
+-The Subscription of the project is: 
+Subscription(<u>ID_sub</u>, starting_date, ending_date,ID_prod, prod_desc, price)
+In a normal DBMS in a bigger project I would separate the subscription and the product info like the id, the product description in a separate table.
+
+
 
 ## About the testing
 
