@@ -20,3 +20,12 @@ class Subscriptiondata(models.Model):
     # The price of the product
     price = models.FloatField()
     
+
+class MostSuccessfuldata(models.Model):
+
+    def __str__(self):
+        return "Subscription n. " + self.prod_desc
+        
+    prod_desc = models.CharField(max_length=500)
+    revenue = models.FloatField()
+    number = models.IntegerField()

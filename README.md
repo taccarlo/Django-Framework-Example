@@ -5,13 +5,16 @@
 
 - [x] Build a backend in Django
 - [x] Populate DB with csv file
-- [ ] Write post query api to obtain the requested data
-    - [ ] Query n.1
+- [x] Write post query api to obtain the requested data
+    - [x] Query n.1
     - [ ] Query n.2
+- [ ] Produce a post method 
+- [ ] Query testing
 - [ ] Frontend react page to show 3 Pages:
     - [ ] All tuples
     - [ ] from-to input page
-    - [ ] result page  
+    - [ ] result page
+- [ ] Set the project on other PC and test if is still working  
 
 ## Creating the project
 ### Creating the app
@@ -53,6 +56,7 @@ example admin admin@admin.com admin
 To operate any change delete the migration folder, run again
 python manage.py makemigrations and python manage.py migrate
 ## Structure
+***********PRENDI DA QUI https://www.geeksforgeeks.org/python-web-development-django/*************
 # Business Logic
 The entity "Subscription"
 Primary key: 
@@ -75,7 +79,7 @@ I choose to develop the project in Django framework.
 Subscription(<u>ID_sub</u>, starting_date, ending_date,ID_prod, prod_desc, price)
 In a normal DBMS in a bigger project I would separate the subscription and the product info like the id, the product description in a separate table.
 -settings.py file is set for a project not yet in production environment.
-
+- I assume that the first requested query is asking for sorting first by an attribute and then by an other attribute, so the query is only one.
 
 ## About the testing
 
