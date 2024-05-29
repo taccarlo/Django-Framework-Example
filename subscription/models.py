@@ -3,6 +3,10 @@ from django.db import models
 # Subscription model
 
 class Subscriptiondata(models.Model):
+
+    def __str__(self):
+        return "Subscription n. " + self.ID_sub
+        
     # The ID of the subscription
     ID_sub = models.CharField(max_length=200)
     # The start of the subscription
