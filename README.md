@@ -3,8 +3,9 @@
 
 ## Request
 
-## Creating the project
 
+## Creating the project
+### Creating the app
 In order to create rest api server
   ```sh
   django-admin startproject myrestapiserver
@@ -13,10 +14,21 @@ In order to create the module to manage the subscriptions
   ```sh
   django-admin startapp subscription
   ```
+### Creating migration from module Subscription
+In order to make migrations
+  ```sh
+  python3 manage.py makemigrations
+  ```
 ## installed apps
-- rest_framework
+- rest_framework if is needed run
+  ```sh
+  pip3 install djangorestframework
+  ```
 ## Run this project
-
+In order to make migrations
+  ```sh
+python manage.py runserver
+  ```
 ## Structure
 # Business Logic
 The entity "Subscription"
