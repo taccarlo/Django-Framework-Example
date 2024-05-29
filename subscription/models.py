@@ -19,3 +19,4 @@ class Subscriptiondata(models.Model):
     prod_desc = models.CharField(max_length=500)
     # The price of the product
     price = models.FloatField()
+    

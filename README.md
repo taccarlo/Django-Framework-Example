@@ -37,8 +37,7 @@ python manage.py sqlmigrate subscription 0001
   ```
 This will create
   ```sh
-CREATE TABLE "subscription_subscriptiondata" ("id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, "ID_sub" varchar(200) 
-NOT NULL, "ID_prod" varchar(200) NOT NULL, "prod_desc" varchar(500) NOT NULL, "price" real NOT NULL);    
+CREATE TABLE "subscription_subscriptiondata" (...);    
   ```
 Create a super user to access to database
   ```sh

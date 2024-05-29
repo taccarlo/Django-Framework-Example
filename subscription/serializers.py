@@ -1,0 +1,8 @@
+from rest_framework import serializers
+from .models import Subscriptiondata
+
+#Serializing the Subscription for generate json and xml api responses.
+class SubscriptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subscriptiondata
+        fields = ['ID_sub','starting_date','ending_date','ID_prod','prod_desc','price']
