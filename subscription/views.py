@@ -5,10 +5,6 @@ from django.db.models import Count, Sum
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-# This view return all data
-class SubscriptionViewSet(viewsets.ModelViewSet):
-    queryset = Subscriptiondata.objects.all()
-    serializer_class = SubscriptionSerializer
 
 # This view return all successfull data order by number of subscribers and revenue 
 class SubscriptionMostSuccessfulViewSet(viewsets.ModelViewSet):
@@ -27,40 +23,29 @@ class SubscriptionMostSuccessfulViewSet(viewsets.ModelViewSet):
     queryset = queryset[:50]
     serializer_class = MostSuccessfulSerializer
 
-# This view return all successfull data order by number of subscribers for each day and revenue for each day
-# Consegna: Dato un periodo temporale (data da-a), produrre una tabella con il numero 
-# di abbonamenti attivi per ciascun giorno e i ricavi complessivi di quel giorno
-class SubscriptionMostSoldByDayViewSet(viewsets.ModelViewSet):
-    queryset = Subscriptiondata.objects.all()
-    serializer_class = SubscriptionSerializer
 
 class SubscriptionAPIView (APIView):
 
     def get(self, request, *args, **kwargs):
-        '''
-        List all the todo items for given requested user
-        '''
         queryset = Subscriptiondata.objects.all()
         serializer = SubscriptionSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
     def post(self, request, *args, **kwargs):
-        '''
-        Create the Todo with given todo data
-        '''
+        
         data = {
-            'task': request.data.get('task'), 
-            'completed': request.data.get('completed'), 
-            'user': request.user.id
+            'from': request.data.get('from'), 
+            'to': request.data.get('to'), 
         }
-
-        print("Ho ricevuto "+request.data.get("task"))
-    
+        print("Ho ricevuto ", request.data.get("from"))
+        print("Ho ricevuto ", request.data.get("to"))
         queryset = Subscriptiondata.objects.all()
         serializer = SubscriptionSerializer(queryset, many=True)
-        
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+        #TODO: add check on serializer
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
+    #rimuovere router
+    #aggiungere data
+    #screenshot funzionamento
+    #aggiornare readme
+    
