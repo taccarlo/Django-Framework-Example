@@ -1,7 +1,9 @@
-from rest_framework import viewsets
+from rest_framework import viewsets, status
 from .serializers import SubscriptionSerializer, MostSuccessfulSerializer
 from .models import Subscriptiondata
 from django.db.models import Count, Sum
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 # This view return all data
 class SubscriptionViewSet(viewsets.ModelViewSet):
@@ -31,3 +33,13 @@ class SubscriptionMostSuccessfulViewSet(viewsets.ModelViewSet):
 class SubscriptionMostSoldByDayViewSet(viewsets.ModelViewSet):
     queryset = Subscriptiondata.objects.all()
     serializer_class = SubscriptionSerializer
+
+class SubscriptionAPIView (APIView):
+
+    def get(self, request, *args, **kwargs):
+        '''
+        List all the todo items for given requested user
+        '''
+        queryset = Subscriptiondata.objects.all()
+        serializer = SubscriptionSerializer(queryset, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
