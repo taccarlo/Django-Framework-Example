@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { useState, useEffect, useLocation } from "react";
+import { useRef, useEffect } from "react";
 import ListItem from "./components/ListItem";
 import axios from "axios";
 
@@ -8,10 +8,24 @@ import axios from "axios";
 //moment(moment('2020-11-18', 'YYYY-MM-DD')).format('DD-MM-YYYY');
 
 function ListPage() {
-  const params = useParams();
+
+    const params =  useParams();
+    // we need this for react 18 in dev mode to run once the request
+    const count = useRef(0);
+    useEffect(() => {
+      if (count.current !== 0) {
+        // code
+        console.log("http request here");
+      }
+      count.current++;
+    }, [])
+  
   //const { state } = props.location;
   //const { name, age } = state;
-  /*useEffect(() => {
+  /*
+    <p>Name: {name}</p>
+    <p>Age: {age}</p>*/
+        /*
         // POST request using axios with error handling
         const article = { title: 'React POST Request Example' };
         axios.post('https://reqres.in/invalid-url', article)
@@ -21,10 +35,8 @@ function ListPage() {
                 console.error('There was an error!', error);
             });
             console.log(JSON.stringify(props))
+            */
         
-    });
-    <p>Name: {name}</p>
-    <p>Age: {age}</p>*/
 
   return (
     
@@ -33,7 +45,7 @@ function ListPage() {
     {(params.dateFrom && params.dateTo) ? 
         <>
             <h1>
-            {params.dateFrom} - {params.dateTo}
+            {params.dateFrom} ▶ {params.dateTo}
             </h1>
             <ListItem titolo="ciao" ammontare="salve"></ListItem>
             <ListItem titolo="buo" ammontare="ngiorno"></ListItem>
