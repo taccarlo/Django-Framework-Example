@@ -9,18 +9,6 @@ from rest_framework.response import Response
 # This view return all successfull data order by number of subscribers and revenue 
 class SubscriptionMostSuccessfulViewSet(viewsets.ModelViewSet):
     
-    date_from = "2023-09-18"
-    date_to = "2023-09-18"
-    queryset = Subscriptiondata.objects.all()
-    # all tuples between date_from and date_to 
-    #queryset = queryset.filter(starting_date__range=[date_from, date_to])
-
-    # obtain the prod_desc ordered by number of count(*) and of sum(price)
-    # SELECT prod_desc, COUNT(*) AS number, SUM(price) as revenue FROM subscriptions GROUP BY prod_desc ORDER BY number DESC, revenue DESC
-    queryset = queryset.values('prod_desc').annotate(number=Count('prod_desc'), revenue=Sum('price')).order_by('-number', '-revenue')
-
-    # first 20
-    queryset = queryset[:50]
     serializer_class = MostSuccessfulSerializer
 
 
@@ -31,21 +19,31 @@ class SubscriptionAPIView (APIView):
         serializer = SubscriptionSerializer(queryset, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
     
+    def __my_query(self, date_from, date_to):
+        # obtain the prod_desc ordered by number of count(*) and of sum(price)
+        queryset = Subscriptiondata.objects.all()
+        # all tuples between date_from and date_to 
+        queryset = queryset.filter(starting_date__range=[date_from, date_to])
+        # SELECT prod_desc, COUNT(*) AS number, SUM(price) as revenue FROM subscriptions GROUP BY prod_desc ORDER BY number DESC, revenue DESC
+        queryset = queryset.values('prod_desc').annotate(number=Count('prod_desc'), revenue=Sum('price')).order_by('-number', '-revenue')
+        # first 20
+        queryset = queryset[:50]
+        return queryset
+    
     def post(self, request, *args, **kwargs):
         
-        data = {
+        date = {
             'from': request.data.get('from'), 
             'to': request.data.get('to'), 
         }
-        print("Ho ricevuto ", request.data.get("from"))
-        print("Ho ricevuto ", request.data.get("to"))
-        queryset = Subscriptiondata.objects.all()
-        serializer = SubscriptionSerializer(queryset, many=True)
+        print("Date selected", date["from"],  date["to"])
+        
+        queryset = self.__my_query(date["from"], date["to"])
+
+        serializer = MostSuccessfulSerializer(queryset, many=True)
         #TODO: add check on serializer
         return Response(serializer.data, status=status.HTTP_200_OK)
     
-    #rimuovere router
-    #aggiungere data
     #screenshot funzionamento
     #aggiornare readme
     
