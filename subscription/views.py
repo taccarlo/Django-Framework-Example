@@ -44,6 +44,3 @@ class SubscriptionAPIView (APIView):
         #TODO: add check on serializer
         return Response(serializer.data, status=status.HTTP_200_OK)
     
-    #screenshot funzionamento
-    #aggiornare readme
-    

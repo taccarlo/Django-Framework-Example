@@ -8,13 +8,14 @@
 - [x] Write post query api to obtain the requested data
     - [x] Query n.1
     - [ ] Query n.2
-- [ ] Produce a post method
-- [ ] Query testing
+- [x] Produce a post method
+- [ ] Test if query is correct from Postman examples
 - [ ] Frontend react page to show 3 Pages:
     - [ ] All tuples
-    - [ ] from-to input page
-    - [ ] result page
+    - [ ] From-to input page
+    - [ ] Result page
 - [ ] Set the project on other PC and test if is still working  
+- [ ] Update readme.md and insert images of the documentation
 
 ## Creating the project
 ### Creating the app
