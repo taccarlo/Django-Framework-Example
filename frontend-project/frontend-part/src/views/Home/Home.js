@@ -48,7 +48,8 @@ function HomePage(){
         
         <Link to={{ pathname: '/list', state: dataToPass }}>Go to Other Component</Link>
  
-       
+       <div>     <Link to="/list" >simple link</Link></div>
+   
     </>;
 }
 
