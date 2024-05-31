@@ -29,6 +29,7 @@
     Istruzioni per installazione/setup
     Eventuale utilizzo di librerie (anzi: meglio utilizzarle dove queste siano utili allo scopo)
     Fare eventuali assunzioni su aspetti altrimenti non precisati
+django-cors-headers
 
 Tra le altre cose, saranno valutati:
 
