@@ -56,7 +56,7 @@ example admin admin@admin.com admin
 To operate any change delete the migration folder, run again
 python manage.py makemigrations and python manage.py migrate
 ## Structure
-***********PRENDI DA QUI https://www.geeksforgeeks.org/python-web-development-django/*************
+***********PRENDI DA QUI https://www.geeksforgeeks.org/python-web-development-django/ o https://www.bezkoder.com/django-rest-api/*************
 # Business Logic
 The entity "Subscription"
 Primary key: 
