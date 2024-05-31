@@ -31,10 +31,10 @@ function HomePage() {
 
         {dateFrom && dateTo ? (
           <h3>
-            <Link to={"/list/" + dateFrom + "/" + dateTo}>Vai alla lista</Link>
+            <Link to={"/list/" + dateFrom + "/" + dateTo}>Go to List</Link>
           </h3>
         ) : (
-          <h3>Inserire le date desiderate</h3>
+          <h3>Insert desired dates</h3>
         )}
       </div>
     </nav>

@@ -11,11 +11,11 @@
 - [x] Produce a post method
 - [ ] Test if query is correct from Postman examples
 - [ ] React 
-    - [ ]  passing date between pages
-    - [ ]  show dates passed
-    - [ ]  if no date redirect home
+    - [x]  passing date between pages
+    - [x]  show dates passed
+    - [x]  if no date redirect home
     - [x]  if no date selected in home button not shown and warning
-    - [ ]  http request in a separate module
+    - [ ]  http request (in a separate module?)
     - [ ]  onload request to database itemlist
     - [ ]  show itemList
 - [ ] Frontend react page to show 3 Pages:

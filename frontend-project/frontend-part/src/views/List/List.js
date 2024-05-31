@@ -27,14 +27,24 @@ function ListPage() {
     <p>Age: {age}</p>*/
 
   return (
-    <>
-      <h1>
-        lista elementi da {params.dateFrom} a {params.dateTo}
-      </h1>
-      <ListItem titolo="ciao" ammontare="salve"></ListItem>
-      <ListItem titolo="buo" ammontare="ngiorno"></ListItem>
-      <Link to="/">To Home</Link>
-    </>
+    
+    <nav className="navbar navbar-light">
+      <div className="container">
+    {(params.dateFrom && params.dateTo) ? 
+        <>
+            <h1>
+            {params.dateFrom} - {params.dateTo}
+            </h1>
+            <ListItem titolo="ciao" ammontare="salve"></ListItem>
+            <ListItem titolo="buo" ammontare="ngiorno"></ListItem>
+        </>
+    :
+        <h3>No dates selected</h3>
+
+    }
+    <h3><Link to="/">Go back</Link></h3>
+    </div>
+  </nav>
   );
 }
 export default ListPage;
