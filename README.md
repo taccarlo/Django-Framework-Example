@@ -10,18 +10,18 @@
     - [ ] Query n.2
 - [x] Produce a post method
 - [ ] Test if query is correct from Postman examples
-- [ ] React 
+- [x] React 
     - [x]  passing date between pages
     - [x]  show dates passed
     - [x]  if no date redirect home
     - [x]  if no date selected in home button not shown and warning
-    - [ ]  http request (in a separate module?)
-    - [ ]  onload request to database itemlist
-    - [ ]  show itemList
-- [ ] Frontend react page to show 3 Pages:
-    - [ ] All tuples
-    - [ ] From-to input page
-    - [ ] Result page
+    - [x]  http request (in a separate module?)
+    - [x]  onload request to database itemlist
+    - [x]  show itemList
+- [x] Frontend react page to show 3 Pages:
+    - [x] All tuples
+    - [x] From-to input page
+    - [x] Result page
 - [ ] Set the project on other PC and test if is still working  
 - [ ] Update readme.md and insert images of the documentation
     il codice sorgente con tutti i file a corredo necessari
@@ -30,7 +30,7 @@
     Eventuale utilizzo di librerie (anzi: meglio utilizzarle dove queste siano utili allo scopo)
     Fare eventuali assunzioni su aspetti altrimenti non precisati
 django-cors-headers
-
+RIMUOVERE I WARNING da react
 Tra le altre cose, saranno valutati:
 
     pulizia, organizzazione e manutenibilità del codice prodotto

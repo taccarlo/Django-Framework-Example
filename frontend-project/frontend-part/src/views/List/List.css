@@ -4,7 +4,7 @@
     padding: 0.5rem;
     margin: 1rem;
     border-radius: 0.5rem;
-    background-color: #bab1ff;  
+    background-color: #c4a900;  
     display: flex;
     /* Distribute items along the main axis with space between them */
     justify-content: space-between;
@@ -24,8 +24,9 @@
     font-size: 1rem;
     font-weight: bold;
     color: white;
-    background-color: #40005d;
+    background-color: #2f455e;
     padding: 0.5rem;
+    margin: 0.2rem;
     border-radius: 0.5rem;
    }
   

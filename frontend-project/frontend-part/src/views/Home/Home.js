@@ -30,11 +30,11 @@ function HomePage() {
         </fieldset>
 
         {dateFrom && dateTo ? (
-          <h3>
+          <h3 className="center">
             <Link to={"/list/" + dateFrom + "/" + dateTo}>Go to List</Link>
           </h3>
         ) : (
-          <h3>Insert desired dates</h3>
+          <h3 className="center">Insert desired dates</h3>
         )}
       </div>
     </nav>

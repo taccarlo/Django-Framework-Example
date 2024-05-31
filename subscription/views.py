@@ -25,7 +25,7 @@ class SubscriptionAPIView (APIView):
         # all tuples between date_from and date_to 
         queryset = queryset.filter(starting_date__range=[date_from, date_to])
         # SELECT prod_desc, COUNT(*) AS number, SUM(price) as revenue FROM subscriptions GROUP BY prod_desc ORDER BY number DESC, revenue DESC
-        queryset = queryset.values('prod_desc').annotate(number=Count('prod_desc'), revenue=Sum('price')).order_by('-number', '-revenue')
+        queryset = queryset.values('ID_prod','prod_desc').annotate(number=Count('prod_desc'), revenue=Sum('price')).order_by('-number', '-revenue')
         # first 20
         queryset = queryset[:50]
         return queryset

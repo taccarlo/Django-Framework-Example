@@ -1,18 +1,15 @@
   
-import {useState} from 'react';
 import "../List.css"
 
 export default function ListItem(props){
-  let titolo = props.titolo;
-  let data = props.data;
-  let ammontare = props.ammontare;
   return (
     <div className="list-item">
-        <div>{data}</div>
+      <div>{props.number}</div>
         <div className="list-item-description">
-            <h2>{titolo}</h2>
+            <h2><b>{props.id}</b> {props.title}</h2>
         </div>
-            <div className="list-item-price"> {ammontare} €</div>
+        <div className="list-item-price">Subscriptions: {props.data}</div>
+            <div className="list-item-price"> Total revenue: {parseFloat(props.price).toFixed(2)} €</div>
     </div>
   )  
 }

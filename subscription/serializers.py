@@ -11,4 +11,4 @@ class SubscriptionSerializer(serializers.ModelSerializer):
 class MostSuccessfulSerializer(serializers.ModelSerializer):
     class Meta:
         model = MostSuccessfuldata
-        fields = ['prod_desc','number','revenue' ]
+        fields = ['ID_prod','prod_desc','number','revenue' ]
