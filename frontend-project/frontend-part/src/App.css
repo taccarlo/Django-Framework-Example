@@ -764,6 +764,8 @@ pre code {
 .container {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top:30px;
+	margin-bottom:30px;
 	padding-left: 15px;
 	padding-right: 15px
 }
