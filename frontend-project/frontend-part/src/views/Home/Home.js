@@ -5,7 +5,6 @@ import {Link} from 'react-router-dom';
 function HomePage(){
     const [datefrom, setdatefrom] = useState(null);
     const [dateto, setdateto] = useState(null);
-    const dataToPass = { name: 'John Doe', age: 25 };
     return <>
         <div>
 
@@ -35,31 +34,15 @@ function HomePage(){
                   </fieldset>
         </div>
 
-
-        {!(datefrom&&dateto) &&
+        {
+          (datefrom&&dateto)?
+            <Link to={"/list/"+datefrom+"/"+dateto} >Vai alla lista</Link>
+            :
             <h3>Inserire le date desiderate</h3>
-        } 
-        <Link to = { {
-            pathname: "/list",
-            myCustomProps: "ciao"
-        }}>
-          qui
-        </Link>
-        
-        <Link to={{ pathname: '/list', state: dataToPass }}>Go to Other Component</Link>
- 
-       <div>     <Link to="/list" >simple link</Link></div>
+        }
    
     </>;
 }
 
 export default HomePage;
 
-
-
-/*
-        {(datefrom&&dateto) &&
-        <Link to={{pathname:"/list", state:{datefrom:datefrom,dateto:dateto}}}><h3>Vai alla lista</h3></Link>
-        }
-        <Link to="/list" state={{myObj: "ciao"}}>qui</Link>
-*/

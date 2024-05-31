@@ -28,7 +28,7 @@ function ListPage(){
     <p>Age: {age}</p>*/
 
     return <>
-    <h1>lista elementi da {params.dateFrom}</h1>
+    <h1>lista elementi da {params.dateFrom} a {params.dateTo}</h1>
         <ListItem titolo="ciao" ammontare="salve"></ListItem>
         <ListItem titolo="buo" ammontare="ngiorno"></ListItem>
         <Link to="/">To Home</Link>
