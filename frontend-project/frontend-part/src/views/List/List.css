@@ -1,0 +1,32 @@
+.list-item {
+    max-width: 50rem;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 0.5rem;
+    background-color: #bab1ff;  
+    display: flex;
+    /* Distribute items along the main axis with space between them */
+    justify-content: space-between;
+   }
+   
+   .list-item-description {
+    align-items: center;
+    flex: 1; /* Each component takes equal space */
+   }
+   .list-item h2 {
+    font-size: 1rem;
+    margin: 0 1rem;
+    flex: 1; /* Each component takes equal space */
+   }
+   
+   .list-item-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #40005d;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+   }
+  
+  

@@ -10,12 +10,41 @@
     - [ ] Query n.2
 - [x] Produce a post method
 - [ ] Test if query is correct from Postman examples
+- [ ] React 
+    - [ ]  passing date between pages
+    - [ ]  show dates passed
+    - [ ]  if no date redirect home
+    - [x]  if no date selected in home button not shown and warning
+    - [ ]  http request in a separate module
+    - [ ]  onload request to database itemlist
+    - [ ]  show itemList
 - [ ] Frontend react page to show 3 Pages:
     - [ ] All tuples
     - [ ] From-to input page
     - [ ] Result page
 - [ ] Set the project on other PC and test if is still working  
 - [ ] Update readme.md and insert images of the documentation
+    il codice sorgente con tutti i file a corredo necessari
+    una breve spiegazione di quanto realizzato.
+    Istruzioni per installazione/setup
+    Eventuale utilizzo di librerie (anzi: meglio utilizzarle dove queste siano utili allo scopo)
+    Fare eventuali assunzioni su aspetti altrimenti non precisati
+
+Tra le altre cose, saranno valutati:
+
+    pulizia, organizzazione e manutenibilità del codice prodotto
+    eventuali ottimizzazioni applicate
+    la chiarezza espositiva
+    inserire in email link ad altri lavori
+    allegare nella email il giusto database e le query sql da lanciare una volta migrato il db
+    spiegare come eseguire react
+    cd my-app
+    npm install
+    npm start
+
+    npm install react-router-dom axios
+
+Documentazione disponibile su reactrouter.com
 
 ## Creating the project
 ### Creating the app
