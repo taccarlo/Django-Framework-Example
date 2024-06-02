@@ -24,6 +24,8 @@ class SubscriptionAPIView (APIView):
         queryset = Subscriptiondata.objects.all()
         # all tuples between date_from and date_to 
         queryset = queryset.filter(starting_date__range=[date_from, date_to])
+        print(date_from, date_to)
+        print(queryset)
         # SELECT prod_desc, COUNT(*) AS number, SUM(price) as revenue FROM subscriptions GROUP BY prod_desc ORDER BY number DESC, revenue DESC
         queryset = queryset.values('ID_prod','prod_desc').annotate(number=Count('prod_desc'), revenue=Sum('price')).order_by('-number', '-revenue')
         # first 20
@@ -41,6 +43,7 @@ class SubscriptionAPIView (APIView):
         queryset = self.__my_query(date["from"], date["to"])
 
         serializer = MostSuccessfulSerializer(queryset, many=True)
-        #TODO: add check on serializer
+        # With enough time i would add some check on serializer
+        # To catch errors
         return Response(serializer.data, status=status.HTTP_200_OK)
     

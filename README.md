@@ -2,35 +2,27 @@
 ## Author: Carlo Tacchella
 
 ## Roadmap
-
 - [x] Build a backend in Django
 - [x] Populate DB with csv file
 - [x] Write post query api to obtain the requested data
     - [x] Query n.1
     - [ ] Query n.2
 - [x] Produce a post method
-- [ ] Test if query is correct from Postman examples
-- [x] React 
+- [x] Test if query is correct from Postman examples
+- [x] Build a React Project
     - [x]  passing date between pages
     - [x]  show dates passed
-    - [x]  if no date redirect home
-    - [x]  if no date selected in home button not shown and warning
-    - [x]  http request (in a separate module?)
     - [x]  onload request to database itemlist
     - [x]  show itemList
-- [x] Frontend react page to show 3 Pages:
-    - [x] All tuples
-    - [x] From-to input page
-    - [x] Result page
-- [ ] Set the project on other PC and test if is still working  
+- [x] Set the project on other PC and test if is still working  
 - [ ] Update readme.md and insert images of the documentation
+   
     il codice sorgente con tutti i file a corredo necessari
     una breve spiegazione di quanto realizzato.
     Istruzioni per installazione/setup
     Eventuale utilizzo di librerie (anzi: meglio utilizzarle dove queste siano utili allo scopo)
     Fare eventuali assunzioni su aspetti altrimenti non precisati
 django-cors-headers
-RIMUOVERE I WARNING da react
 Tra le altre cose, saranno valutati:
 
     pulizia, organizzazione e manutenibilità del codice prodotto
