@@ -1,5 +1,4 @@
 import { Link, useParams } from "react-router-dom";
-import { useState } from "react";
 import ListItem from "./components/ListItem";
 import useDataFetch from "../../requests/useDataFetch";
 
@@ -53,7 +52,7 @@ function ListPage() {
         ) : (
           <h3 className="center">No dates selected</h3>
         )}
-        <h3>
+        <h3 className="center">
           <Link to="/">Go back</Link>
         </h3>
       </div>

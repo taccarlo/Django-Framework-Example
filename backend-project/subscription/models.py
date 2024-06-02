@@ -26,7 +26,11 @@ class MostSuccessfuldata(models.Model):
     def __str__(self):
         return "Subscription n. " + self.prod_desc
         
+    # The ID of the product
     ID_prod = models.CharField(max_length=200)
+    # The description of the product
     prod_desc = models.CharField(max_length=500)
+    # The revenue of the subscription
     revenue = models.FloatField()
+    # The number of subscribers
     number = models.IntegerField()
