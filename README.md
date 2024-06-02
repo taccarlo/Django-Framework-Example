@@ -1,6 +1,17 @@
 # Django rest api study
 ## Author: Carlo Tacchella
 
+![Immagine 2024-06-02 125535](https://github.com/taccarlo/django-study/assets/3799322/8628947b-c500-4884-9ade-e582daeaab93)
+![Immagine 2024-06-02 125504](https://github.com/taccarlo/django-study/assets/3799322/56da000f-78d8-4b83-8667-26d49335eaaf)
+![Immagine 2024-06-02 125408](https://github.com/taccarlo/django-study/assets/3799322/4bd4cb1c-2e2e-422f-821d-b9642bc93e4f)
+![Immagine 2024-05-31 114126](https://github.com/taccarlo/django-study/assets/3799322/86fd4d41-3ba8-40e9-9a72-15eebd8848cd)
+![Immagine 2024-05-31 114024](https://github.com/taccarlo/django-study/assets/3799322/e1f75d8b-fee1-4d5b-8b4a-769b19741ecb)
+![django-rest-api-tutorial-example-architecture](https://github.com/taccarlo/django-study/assets/3799322/83418067-9d62-40b0-821b-7c8aa497e4e2)
+![Immagine 2024-06-02 125609](https://github.com/taccarlo/django-study/assets/3799322/8e6420bf-71f6-48fd-8f05-c2ada1e8f569)
+
+
+
+
 ## Roadmap
 - [x] Build a backend in Django
 - [x] Populate DB with csv file
