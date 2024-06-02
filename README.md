@@ -56,33 +56,32 @@ In order to create rest api server
 In order to create the module to manage the subscriptions
   ```sh
   django-admin startapp subscription
-  ```
-### Creating migration from module Subscription
-In order to make migrations
-  ```sh
-  python manage.py makemigrations
-  ```
+
 ## installed apps
 - rest_framework if is needed run
   ```sh
   pip3 install djangorestframework
   ```
 ## Run this project
-In order to make migrations
+In order to run this project
   ```sh
 python manage.py runserver
   ```
 ## Setting up database
 
-In order to support the app with a DB
-  ```sh
-python manage.py sqlmigrate subscription 0001 
-  ```
 Create a super user to access to database
   ```sh
 python manage.py createsuperuser
   ```
-example admin admin@admin.com admin
+
+In order to make migrations
+  ```sh
+  python manage.py makemigrations
+  ```
+In order to support the app with a DB
+  ```sh
+python manage.py sqlmigrate subscription 0001 
+  ```
 
 To operate any change delete the migration folder, run again
 python manage.py makemigrations and python manage.py migrate
